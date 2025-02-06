@@ -74,3 +74,6 @@ variable2 = open("prueba2.txt","w")
 print("Hola mundo desde North Korea", file=variable2)
 
 variable2.close()
+
+
+#len(variable2) medir tamaño
