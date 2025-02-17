@@ -105,23 +105,23 @@ while banderaCicloPrincipal:
     oPrincipal = input("Seleccione su opción")
     
     if oPrincipal == '1':
-        leerArchivo()
+        "leerArchivo()"
     elif oPrincipal == '2':
-        escribirArchivo()
+        "escribirArchivo()"
     elif oPrincipal == '3':
-        escribirArchivo()
+        "escribirArchivo()"
     elif oPrincipal == '4':
-        crearArchivo()
+        "crearArchivo()"
     elif oPrincipal == '5':
-        copiarARchivo
+        "copiarArchivo()"
     elif oPrincipal == '6':
-        
+        ""
     elif oPrincipal == '7':
-        
+        ""
     elif oPrincipal == '8':
-        
+        ""
     else:
-        
+        ""
 
 
 
