@@ -14,6 +14,7 @@ menu1 = """
 #
 """
 bMenu1 = True
+bMenu2 = True
 
 menu2 = """
 #   Menú División
@@ -24,8 +25,7 @@ menu2 = """
 #   4 -> Regresar a menú principal
 #
 """
-bMenu2 = True
-bDiv0 = True
+
 
 def exponentes(base, potencia):
     return base ** potencia
@@ -35,6 +35,7 @@ def multiplicacion(factor1, factor2):
 
 
 def division(dividendo, divisor):
+    bDiv0 = True
     if divisor != 0:
         return dividendo/divisor
     else:
@@ -71,26 +72,31 @@ def leerNumeros():
     return num1, num2 
 
 
-def divisionMenu(bMenu2):
-    bandera = bMenu2
-    while bandera:
+def divisionMenu():
+    bMenu2 = True 
+    while bMenu2:
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(menu2)
         op2 = int(input("Ingrese la opción deseada: "))
         if op2 == 1:
             t1 = leerNumeros()
-            division(t1[0],t1[1])
+            print(division(t1[0],t1[1]))
+            tskip = input("Presione tecla para continuar...")
         elif op2 == 2:
             t2 = leerNumeros()
-            divisionEntera(t2[0],t2[1])
+            print(divisionEntera(t2[0],t2[1]))
+            tskip = input("Presione tecla para continuar...")
         elif op2 == 3:
             t3 = leerNumeros()
-            divisionResiduo(t3[0],t3[1])            
+            print(divisionResiduo(t3[0],t3[1]))
+            tskip = input("Presione tecla para continuar...")
         elif op2 == 4:
             bMenu2 = False
             break            
         else:
             print("Opción inválida.")
-            #os.system('cls' if os.name == 'nt' else 'clear')
+            tskip = input("Presione tecla para continuar...")
+            
         
 def adicion(num1, num2):
     return num1 + num2
@@ -100,28 +106,33 @@ def sustraccion(num1, num2):
 
 
 while bMenu1:
-    
+    os.system('cls' if os.name == 'nt' else 'clear')
     print(menu1)
     op = input("Ingrese la opción deseada: ")
     op = op.upper()
     if op == 'E':
         tE = leerNumeros()
         print(exponentes(tE[0],tE[1]))
+        tskip = input("Presione una tecla para continuar...")
     elif op == 'M':
         tM = leerNumeros()
         print(multiplicacion(tM[0],tM[1]))
+        tskip = input("Presione una tecla para continuar...")
     elif op == 'D':
-        divisionMenu(bMenu2)
+        divisionMenu()
     elif op == 'A':
         tA = leerNumeros()
         print(adicion(tA[0],tA[1]))
+        tskip = input("Presione una tecla para continuar...")
     elif op == 'S':
         tS = leerNumeros()
         print(sustraccion(tS[0],tS[1]))
+        tskip = input("Presione una tecla para continuar...")
     elif  op == 'X':
         bMenu1 = False
     else:
         print("Opción inválida")
-        #os.system('cls' if os.name == 'nt' else 'clear')
+        tskip = input("Presione tecla para continuar...")
+        
 
 
