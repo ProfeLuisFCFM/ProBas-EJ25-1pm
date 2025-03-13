@@ -14,7 +14,12 @@
 nombres = ["Carlos", "Ana", "Luis"]
 notas = [90, 85, 88]
 for nombre, nota in zip(nombres, notas):   	
-    print(f"{nombres} obtuvo {nota}")
+    print(f"{nombre} obtuvo {nota}")
+
+
+for i in enumerate(nombres):
+    print(i)
+    
 
 """
 def multiplicar_por_dos(numero):
