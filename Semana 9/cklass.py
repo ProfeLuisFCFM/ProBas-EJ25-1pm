@@ -43,7 +43,7 @@ class Politopo2(ABC):
     
 
 class Cuadrado(Politopo2):
-    def __init__(self,Nombre='Cuadrado',l=0):
+    def __init__(self,l,Nombre='Cuadrado'):
         self.lado = l
         super().__init__(self,NombreFigura=Nombre)
         
@@ -54,6 +54,20 @@ class Cuadrado(Politopo2):
         return self.lado*4
     
     
-cua = Cuadrado(l=34)
+cua = Cuadrado(34)
 
 print(cua.area(),cua.perimetro())
+
+
+class Triangulo(Politopo2):
+    def __init__(self,a,b,c,Nombre='Triangulo'):
+        self.ladoA = a
+        self.ladoB = b
+        self.ladoC = c
+        super().__init__(self,NombreFigura=Nombre)
+        
+    def area(self):
+        return ((self.LadoA**2)-(self.LadoB/2)**2)**1/2
+                    
+    def perimetro(self):
+        return self.ladoA + self.ladoB + self.ladoC
