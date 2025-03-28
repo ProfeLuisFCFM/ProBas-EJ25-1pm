@@ -33,7 +33,7 @@ def fiboR(n,fib_list=[0, 1]):
 
     
 # Ejemplo de uso:
-n = 10  # Número de Fibonacci que deseas calcular
+n = 999  # Número de Fibonacci que deseas calcular
 print(f"F({n}) = {fiboR(n)}")
 
 with open("fibo_mem.txt","r") as fil:
