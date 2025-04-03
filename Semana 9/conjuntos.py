@@ -1,29 +1,37 @@
 conjunto = {1,2,3,4}
+#conjuntoChar = {''}
 
 conjunto2 = {3,4,5,6}
 
 
 print(type(conjunto),type(conjunto2))
 
-#conjunto.add('A')
-#conjunto.add('a')
 
-#print(conjunto)
+#conjuntoChar.add('A'.lower())
+#conjuntoChar.add('a')
+
+#print(conjuntoChar)
 
 #conjunto.clear()
 #print(conjunto)
 
 conjunto3 = conjunto.copy()
-
+conjunto3.add(5)
 #print(conjunto3)
 
-print(conjunto.difference(conjunto2))
+#print(conjunto.difference(conjunto2))
+
+#print(conjunto2.difference(conjunto))
+
 
 conjunto.discard(7)
 
-print(conjunto.intersection(conjunto2))
+#print(conjunto.intersection(conjunto2))
 
-print(conjunto.isdisjoint(conjunto2))
+#print(conjunto.isdisjoint(conjunto2))
+#conjunto.discard(4)
+#conjunto2.discard(3)
+#print(conjunto.isdisjoint(conjunto2))
 
 
 subset = {1,4}
@@ -36,13 +44,13 @@ print(superset.issuperset(conjunto))
 
 print(conjunto.issubset(superset))
 
-#conjunto.pop()
-#print(conjunto)
+conjunto.pop()
+print(conjunto)
 
-#conjunto.add(5)
-#print(conjunto)
-#conjunto.remove(5)
-#print(conjunto)
+conjunto.add(5)
+print(conjunto)
+conjunto.remove(5)
+print(conjunto)
 
 
 print(conjunto.symmetric_difference(conjunto2))
