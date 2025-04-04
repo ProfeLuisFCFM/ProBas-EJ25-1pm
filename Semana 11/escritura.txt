@@ -1,0 +1,2 @@
+hola	mundo	desde monterrey a 45°C
+La mayoría de edad es a los 18 años.
